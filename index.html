@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Documentation Hub</title>
+    <style>
+        /* Shared "System" Design */
+        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: #333; background: #f4f6f9; margin: 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        
+        /* Typography */
+        h1 { font-size: 3.5em; color: #2c3e50; margin-bottom: 10px; letter-spacing: -1px; }
+        p.subtitle { font-size: 1.3em; color: #666; margin-bottom: 60px; font-weight: 300; }
+        
+        /* Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; text-align: left; }
+        
+        /* Project Cards */
+        .card { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 35px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 6px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        
+        /* Project Specific Themes */
+        .card.regex { border-color: #6c5ce7; }
+        .card.sql { border-color: #3498db; }
+        
+        .card h2 { margin-top: 0; color: #2c3e50; font-size: 1.8em; }
+        .card p.desc { color: #555; flex-grow: 1; }
+        
+        /* Feature Lists */
+        .features { list-style: none; padding: 0; margin: 20px 0; border-top: 1px solid #eee; padding-top: 20px; }
+        .features li { padding: 5px 0; color: #666; font-size: 0.9em; }
+        .features li::before { content: "✓"; color: #27ae60; font-weight: bold; margin-right: 8px; }
+        
+        /* Action Buttons */
+        .btn { 
+            display: block; 
+            text-align: center;
+            padding: 12px 20px; 
+            background: #eee; 
+            color: #333; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        
+        .card.regex .btn { background: #6c5ce7; color: white; }
+        .card.regex .btn:hover { background: #5b4cc4; }
+        
+        .card.sql .btn { background: #3498db; color: white; }
+        .card.sql .btn:hover { background: #2980b9; }
+        
+        footer { margin-top: 80px; color: #999; font-size: 0.9em; border-top: 1px solid #e1e4e8; padding-top: 30px; }
+        footer a { color: #555; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Documentation Hub</h1>
+    <p class="subtitle">A collection of "Living Documentation" projects. <br>Code that generates its own tutorials.</p>
+
+    <div class="grid">
+        
+        <!-- REGEX CARD -->
+        <div class="card regex">
+            <h2>Regex Learning</h2>
+            <p class="desc">A visualization engine for Regular Expressions. It runs Python <code>re</code> patterns against test inputs and visually highlights matches, captures, and groups.</p>
+            <ul class="features">
+                <li>Visual Match Highlighting</li>
+                <li>Group Extraction & Named Groups</li>
+                <li>Edge Cases (Lookarounds, Boundaries)</li>
+            </ul>
+            <!-- NOTE: The link is just the folder name of your other repo -->
+            <a href="/regex_with_re_learning/" class="btn">Launch Regex Guide &rarr;</a>
+        </div>
+
+        <!-- SQL CARD -->
+        <div class="card sql">
+            <h2>SQL Master Course</h2>
+            <p class="desc">A story-driven SQL tutorial powered by a persistent-state database engine. Follow the lifecycle of a Bookstore database from creation to analytics.</p>
+            <ul class="features">
+                <li>Persistent Database State</li>
+                <li>Schema, Inserts, Joins, & Updates</li>
+                <li>Live Error Handling & Validation</li>
+            </ul>
+            <!-- NOTE: The link is just the folder name of your other repo -->
+            <a href="/sqlite3_learning/" class="btn">Launch SQL Course &rarr;</a>
+        </div>
+
+        <!-- ASSEMBLY CARD -->
+        <div class="card asm">
+            <h2>Assembly Learning</h2>
+            <p class="desc">A visualization engine for assmbly code from c examples. the project generates documentaion against test source code and the corresponding assembly output.</p>
+            <ul class="features">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!-- NOTE: The link is just the folder name of your other repo -->
+            <a href="/asm_learning/" class="btn">Launch asm Guide &rarr;</a>
+        </div>
+
+        <div class="card LawForge">
+            <h2>Law Forge</h2>
+            <p class="desc">Implenents the Calculus of Physical Law</p>
+            <ul class="features">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <a href="/LawForge/" class="btn">Launch  LawForge &rarr;</a>
+        </div>
+
+        <div class="card Law-Discovery">
+            <h2>Law-Discovery</h2>
+            <p class="desc">A law discovery tool that works through physical law like a game. Explores the space of physical law with dimensional analsysis</p>
+            <ul class="features">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <a href="/Law-Discovery/" class="btn">Launch Law-Discovery &rarr;</a>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>Created by <strong>BuckRogers1965</strong>. Hosted on GitHub Pages.<br>
+        <a href="https://github.com/BuckRogers1965">View Source on GitHub</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
